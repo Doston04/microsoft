@@ -6,7 +6,7 @@ import { cartIcon, chevronDown, signIn, zoomIcon } from "./icons";
 export default function Header() {
   return (
     <header>
-      <div className="max-w-[1380px] w-full mx-auto px-[20px] text-[13px] tracking-[0.3px] hidden md:flex justify-between">
+      <div className="w-full text-[13px] tracking-[0.3px] hidden md:flex justify-between">
         <div className="flex items-center space-x-[16px]">
           <div className="headerLogo">
             <Link href="/">
@@ -71,7 +71,7 @@ export default function Header() {
           </div>
         </div>
       </div>
-      <div className="mobileHeader md:hidden flex justify-center items-center h-[50px] border border-black">
+      <div className="mobileHeader md:hidden flex justify-center items-center h-[50px]">
         <div className="absolute left-[20px] flex items-center space-x-[12px]">
           <div className="hamburger">
             <span></span>
