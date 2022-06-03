@@ -12,6 +12,7 @@
 :root {
     --text-black: #262626;
     --link-blue: #0067B8;
+    --gray: #f2f2f2;
 }
 
 .headerNav a {
@@ -77,17 +78,61 @@
     background-color: var(--text-black);
 }
 
+footer {
+    background-color: var(--gray);
+    color: #616161;
+}
+
+.footerInner1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 12px;
+    align-items: flex-start;
+}
+
+.footerTitle {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 500;
+}
+
+.footerInner2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
 @media (max-width: 1200px) {
     .addingLinks {
         display: none;
     }
 }
 
-@media (max-width: 950px) {
+@media (max-width: 1024px) {
     .moreLink {
         display: flex;
     }
     .yetimLink {
         display: none;
+    }
+    .footerInner1 {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 36px;
+    }
+}
+
+@media (max-width: 920px) {
+    .footerInner2 {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 550px) {
+    .footerInner1 {
+        grid-template-columns: 1fr;
+        gap: 36px;
     }
 }
