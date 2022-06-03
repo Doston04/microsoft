@@ -1,16 +1,93 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+    --text-black: #262626;
+    --link-blue: #0067B8;
 }
 
-* {
-  box-sizing: border-box;
+.headerNav a {
+    position: relative;
+}
+
+.headerNav a:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2.5px;
+    background-color: var(--text-black);
+    bottom: -2px;
+    left: 0;
+}
+
+.headerLink p {
+    position: relative;
+}
+
+.headerLink p:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2.5px;
+    background-color: var(--text-black);
+    bottom: -2px;
+    left: 0;
+}
+
+.zoomIcon {
+    transform: rotate(90deg);
+    margin-top: 3px;
+}
+
+.signInIcon {
+    border: 1px solid var(--text-black);
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.moreLink {
+    display: none;
+}
+
+.yetimLink {
+    display: block;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.hamburger span {
+    width: 18px;
+    height: 2px;
+    background-color: var(--text-black);
+}
+
+@media (max-width: 1200px) {
+    .addingLinks {
+        display: none;
+    }
+}
+
+@media (max-width: 950px) {
+    .moreLink {
+        display: flex;
+    }
+    .yetimLink {
+        display: none;
+    }
 }
