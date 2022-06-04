@@ -21,7 +21,7 @@ export default function Home() {
         <main className="flex-auto">
           <section id="intro">
             <div className="contentCenter introInner">
-              <div className="w-full"><Header /></div>
+              <div className="w-full fixed contentCenter top-0 inset-x-0 z-20 bg-white"><Header /></div>
               <div className="swiperIntro"></div>
               <div className="toolsDiv">
                 <Link href="/">
