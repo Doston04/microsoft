@@ -1,12 +1,12 @@
 import Head from "next/head";
-import Link from "next/Link";
-import Image from "next/Image";
+import Image from "next/image";
 import Footer from "../components/footer";
 import Header from "../components/header";
 import { chevronRight } from "../components/icons";
 import fifa from "../public/images/fifa.jpg"
 import godOfWar from "../public/images/god-of-war.jpg"
 import asphalt from "../public/images/asphalt-9.jpg"
+import Link from "next/link";
 
 export default function Home() {
   return (
