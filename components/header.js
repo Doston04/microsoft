@@ -1,5 +1,5 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from "next/Link";
+import Image from "next/Image";
 import logo from "../public/images/ms-logo.png"
 import { cartIcon, chevronDown, signIn, zoomIcon } from "./icons";
 
@@ -88,7 +88,7 @@ export default function Header() {
           </Link>
         </div>
         <div className="absolute right-[20px] flex items-center space-x-[12px]">
-          <span>{cartIcon}</span>
+          <span className="cartIcon">{cartIcon}</span>
           <span className="signInIcon">{signIn}</span>
         </div>
       </div>

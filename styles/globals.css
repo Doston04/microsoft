@@ -24,6 +24,23 @@
     }
 }
 
+@keyframes marginLeft {
+    from {
+        margin-left: 0;
+    }
+    to {
+        margin-left: 4px;
+    }
+}
+
+.introInner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+}
+
 .contentCenter {
     max-width: 1380px;
     width: 100%;
@@ -62,6 +79,13 @@
 .zoomIcon {
     transform: rotate(90deg);
     margin-top: 3px;
+    width: 18px;
+    height: 18px;
+}
+
+.cartIcon {
+    width: 16px;
+    height: 16px;
 }
 
 .signInIcon {
@@ -100,6 +124,26 @@
     height: 100%;
 }
 
+.toolsDiv {
+    display: flex;
+    align-items: flex-start;
+    padding: 2% 0;
+    gap: 40px;
+}
+
+.tools {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.tools:hover {
+    text-decoration: underline;
+}
+
 .newsImage {
     background-color: var(--gray);
     width: 100%;
@@ -118,6 +162,13 @@
     font-weight: 500;
 }
 
+.newsLinkDiV {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--link-blue);
+}
+
 .newsLink {
     color: var(--link-blue);
     font-weight: 500;
@@ -128,13 +179,43 @@
     content: "";
     position: absolute;
     width: 100%;
-    height: 2px;
+    height: 2.5px;
     background-color: var(--link-blue);
     bottom: -3px;
     left: 0;
     animation: fadeIn 300ms ease 1;
 }
 
+.chevronRight {
+    transition: all 300ms;
+    margin-top: 6px;
+}
+
+.newsLinkDiV:hover .chevronRight {
+    animation: marginLeft 300ms ease 1;
+}
+
+.salesContainer {
+    display: grid;
+    grid-template-columns: 0.6fr 0.4fr;
+    height: 500px;
+    cursor: pointer;
+    background-color: rgb(19, 19, 19);
+}
+
+.salesContent {
+    display: flex;
+    align-items: center;
+    max-width: 650px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.infoContainer {
+    height: 500px;
+    width: 100%;
+    background-color: var(--gray);
+}
 
 footer {
     background-color: var(--gray);
@@ -172,6 +253,34 @@ footer {
     text-align: center;
     font-weight: 500;
     font-size: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.gridCardsDiv {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.followMicrosoft {
+    font-size: 15px;
+    line-height: 20px;
+    color: #616161;
+}
+
+.newsDescription {
+    font-size: 15px;
+    color: #000;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;  
+    overflow: hidden;
+    text-overflow: ellipsis; 
 }
 
 @media (max-width: 1200px) {
@@ -191,6 +300,9 @@ footer {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 36px;
     }
+    .gridCardsDiv {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 }
 
 @media (max-width: 920px) {
@@ -199,11 +311,59 @@ footer {
         gap: 12px;
         align-items: flex-start;
     }
+    .toolsDiv {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 840px) {
+    .introInner {
+        height: auto;
+        align-items: flex-start;
+    }
+    .indexSVG {
+        width: 32px;
+        height: 32px;
+    }
+    .gridCardsDiv {
+        grid-template-columns: 1fr 1fr;
+    }
+    .toolsDiv {
+        flex-direction: column;
+    }
+    .tools {
+        flex-direction: row;
+    }
+    .introParagraph {
+        max-width: 100%;
+        text-align: left;
+    }
 }
 
 @media (max-width: 550px) {
     .footerInner1 {
         grid-template-columns: 1fr;
         gap: 36px;
+    }
+    .gridCardsDiv {
+        grid-template-columns: 1fr;
+    }
+    .indexSVG {
+        width: 28px;
+        height: 28px;
+    }
+    .toolsDiv {
+        padding: 24px 0;
+    }
+    #business {
+        margin-top: 24px;
+    }
+    .zoomIcon {
+        width: 24px;
+        height: 24px;
+    }
+    .cartIcon {
+        width: 24px;
+        height: 24px;
     }
 }
