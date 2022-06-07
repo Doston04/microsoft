@@ -366,4 +366,7 @@ footer {
         width: 24px;
         height: 24px;
     }
+    .newsImage {
+        height: 200px;
+    }
 }

@@ -63,7 +63,7 @@ export default function Header() {
           </div>
           <div className="headerLink flex items-center space-x-[6px] mt-[16px] mb-[12px] cursor-pointer">
             <p className="addingLinks">Cart</p>
-            <span>{cartIcon}</span>
+            <span className="cartIcon">{cartIcon}</span>
           </div>
           <div className="headerLink flex items-center space-x-[6px] mt-[16px] mb-[12px] cursor-pointer">
             <p className="addingLinks">Sign in</p>
